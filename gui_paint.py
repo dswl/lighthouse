@@ -10,6 +10,7 @@ class DrawableImageLabel(QLabel):
         self.last_point = QPoint()
         self.pen_color = Qt.red
         self.pen_width = 4
+        self.undo_stack = []
 
     def setPixmap(self, pixmap: QPixmap):
         super().setPixmap(pixmap.copy())  # Make a copy so we can draw on it
@@ -20,12 +21,16 @@ class DrawableImageLabel(QLabel):
     def setPenWidth(self, width: int):
         self.pen_width = width
 
-
+    def undo(self):
+        if self.undo_stack:
+            previous = self.undo_stack.pop()
+            self.setPixmap(previous)
 
     def mousePressEvent(self, event: QMouseEvent):
         if event.button() == Qt.LeftButton:
             self.drawing = True
             self.last_point = event.pos()
+            self.undo_stack.append(self.pixmap().copy())
 
     def mouseMoveEvent(self, event: QMouseEvent):
         if self.drawing:
