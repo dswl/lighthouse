@@ -52,6 +52,9 @@ class ImageApp(QWidget):
         self.size_slider.setValue(4)
         self.size_slider.valueChanged.connect(self.change_pen_size)
 
+        self.undo_button = QPushButton("Undo")
+
+        self.pen_layout.addWidget(self.undo_button)
         self.pen_layout.addWidget(self.color_button)
         self.pen_layout.addWidget(self.size_label)
         self.pen_layout.addWidget(self.size_slider)
@@ -66,6 +69,7 @@ class ImageApp(QWidget):
             label.setAlignment(Qt.AlignCenter)
             self.image_layout.addWidget(label)
 
+        self.undo_button.clicked.connect(self.image_labels[0].undo)
         # Buttons
         self.load_button = QPushButton("Load Image")
         self.normalize_button = QPushButton("Normalize Image")
