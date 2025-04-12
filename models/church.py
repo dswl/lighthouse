@@ -55,12 +55,11 @@ class Model():
     def setTimestep(self, timestep):
         self.timestep = timestep
 
-    def testSyntheticNoise(self, timestep = 200):
+    def testSyntheticNoise(self):
         if self.image_tensor == None:
             print("Ensure Image is Loaded")
             return -1
         noise = torch.randn_like(self.image_tensor)
-        self.timestep = timestep
         self.image_tensor = self.scheduler.add_noise(self.image_tensor, noise, torch.tensor([timestep], device=self.device))
 
     def displayTensor(self, tensor, title = "Image"):
