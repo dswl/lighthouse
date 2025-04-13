@@ -13,6 +13,7 @@ from models.church import Model
 from gui_paint import DrawableImageLabel
 from PyQt5.QtWidgets import QColorDialog
 from PyQt5.QtWidgets import QSlider, QLabel
+from PyQt5.QtWidgets import QFileDialog
 
 
 
@@ -100,6 +101,11 @@ class ImageApp(QWidget):
         self.layout.addLayout(self.image_layout)
         self.layout.addLayout(self.button_layout)
         self.layout.addLayout(self.button2_layout)
+
+        self.save_button = QPushButton("Save Output")
+        self.save_button.clicked.connect(self.save_output_image)
+        self.layout.addWidget(self.save_button)
+
         self.setLayout(self.layout)
 
     def choose_color(self):
@@ -168,6 +174,13 @@ class ImageApp(QWidget):
         self.model.testSyntheticNoise()
         pixmap = tensor_to_qpixmap(self.model.getImage())
         self.image_labels[1].setPixmap(pixmap)
+
+    def save_output_image(self):
+        pixmap = self.image_labels[2].pixmap()
+        if pixmap:
+            file_path, _ = QFileDialog.getSaveFileName(self, "Save Image", "", "PNG Files (*.png);;JPEG Files (*.jpg *.jpeg)")
+            if file_path:
+                pixmap.save(file_path)
 
 # Run the app
 if __name__ == "__main__":
