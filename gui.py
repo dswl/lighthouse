@@ -34,6 +34,7 @@ class ImageApp(QWidget):
 
         # Model
         self.model = Model()
+        self.model.setTimestep(180)
 
         # Layouts
         self.layout = QVBoxLayout()
@@ -164,7 +165,7 @@ class ImageApp(QWidget):
 
     def inject_and_normalize(self):
         # self.model.normalizeImage()
-        self.model.testSyntheticNoise(timestep=200)
+        self.model.testSyntheticNoise()
         pixmap = tensor_to_qpixmap(self.model.getImage())
         self.image_labels[1].setPixmap(pixmap)
 

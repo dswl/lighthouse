@@ -60,7 +60,7 @@ class Model():
             print("Ensure Image is Loaded")
             return -1
         noise = torch.randn_like(self.image_tensor)
-        self.image_tensor = self.scheduler.add_noise(self.image_tensor, noise, torch.tensor([timestep], device=self.device))
+        self.image_tensor = self.scheduler.add_noise(self.image_tensor, noise, torch.tensor([self.timestep], device=self.device))
 
     def displayTensor(self, tensor, title = "Image"):
         img = tensor.squeeze().permute(1, 2, 0).cpu().clamp(0, 1).numpy()
