@@ -33,7 +33,7 @@ If you'd rather use the model programmatically, you can start with `church.py` (
 
 Whether you're running `gui.py` or using `church.py`, the model needs to be available locally. If it isn’t already on your machine, it will be downloaded automatically.
 
-⚠️ **Make sure you have at least 15GB of free disk space** to accommodate the model download.
+⚠️ **Make sure you have at least 2GB of free disk space** to accommodate the model download (Other frameworks and pipelines might also be downloaded, so just make sure you have enough space).
 
 ## Inspiration 🌅
 

@@ -1,4 +1,3 @@
-# Instead of using mmagic, let's use diffusers which is more compatible with Python 3.12
 import torch
 from diffusers import DDPMPipeline, DDPMScheduler
 from torchvision import transforms
