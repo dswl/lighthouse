@@ -35,6 +35,8 @@ Whether you're running `gui.py` or using `church.py`, the model needs to be avai
 
 ⚠️ **Make sure you have at least 2GB of free disk space** to accommodate the model download (Other frameworks and pipelines might also be downloaded, so just make sure you have enough space).
 
+# What is Lighthouse?
+
 ## Inspiration 🌅
 
 We’ve all been there: you snap a bunch of photos to capture a moment, only to look back and feel like something’s missing. Maybe the lighting was off, the image is way too grainy, or there’s a distracting detail you wish you could erase. The photo just doesn’t feel like the moment you lived. That frustration is what inspired Lighthouse — a tool designed to reconstruct and creatively reimagine noisy or imperfect images using the power of diffusion.
