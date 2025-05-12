@@ -24,5 +24,4 @@ def testRealNoise(model, filename):
     model.diffusion(verbose=True)
     model.displayDiffused()
 
-if __name__ == "__main__":
-    main()
+main()

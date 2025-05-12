@@ -30,7 +30,7 @@ python3 gui.py
 
 If you'd rather use the model programmatically, you can start with `church.py` (currently the only API script uploaded). To swap in a different model — for example, another one of Google's DDPM models — just modify the relevant section in `church.py`. It's a relatively straightforward change, and the code is written to be easy to follow.
 
-> ℹ️ Full documentation for `church.py` is coming soon. That said, most of the functionality is pretty intuitive (or at least I like to think so 😅).
+> ℹ️ Documentation for church.py is now in documentation/church.html. Due to financial reasons, I cannot host the documentation on a website, so simply load the path of the html file into your browser. If you'd like a more rustic demo of the API itself (the gui demo is a bit heavy), check out api_demo.py
 
 ---
 
