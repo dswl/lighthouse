@@ -1,3 +1,8 @@
+# Creative Image Generation with Lighthouse
+
+![alt text](demo_img/lighthouse1.png)
+![alt text](demo_img/lighthouse2.png)
+
 # Getting Started with Lighthouse
 
 ## Requirements
