@@ -1,7 +1,11 @@
 # Creative Image Generation with Lighthouse
 
-![alt text](demo_img/lighthouse1.png)
-![alt text](demo_img/lighthouse2.png)
+![Lighthouse Architecture](demo_img/lighthouse1.png)
+![Example Images](demo_img/lighthouse2.png)
+
+# Devpost and Demo Link
+
+## [Devpost](https://devpost.com/software/lighthouse-p1cb0k) | [YouTube Demo](https://youtu.be/LWvlYRctdhg)
 
 # Getting Started with Lighthouse
 
